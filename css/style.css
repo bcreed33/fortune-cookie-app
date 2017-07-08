@@ -1,0 +1,44 @@
+body{
+  background-color: pink;
+}
+
+#wrapper{
+background: pink;
+width: 90%;
+max-width: 1200px;
+margin: 0 auto;
+}
+ hr{
+     color: black;
+     border-color: #000;
+    background-color: black;
+ }
+
+#cookieImg{
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+#luckyNumberSection{
+-webkit-box-shadow:inset 0 0 10px 1px rgba(1,1,1,.75);
+box-shadow:inset 0 0 10px 1px rgba(1,1,1,.75);
+border-radius: 10px;
+padding-top:15px;
+
+}
+
+#luckyNumberSection h2,  p{
+    text-align: center;
+}
+#luckyNumberSection  p{
+     font-size: 18px;
+}
