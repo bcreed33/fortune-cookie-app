@@ -20,7 +20,12 @@ margin: 0 auto;
 }
 
 
-
+#infoInputSection, #yourFortuneSection {
+    display:block;
+    height:0px;
+    transition:height .51s ease-in-out;
+    overflow: hidden;
+}
 
 
 
@@ -29,10 +34,11 @@ margin: 0 auto;
 
 
 #luckyNumberSection{
--webkit-box-shadow:inset 0 0 10px 1px rgba(1,1,1,.75);
+/*-webkit-box-shadow:inset 0 0 10px 1px rgba(1,1,1,.75);
 box-shadow:inset 0 0 10px 1px rgba(1,1,1,.75);
-border-radius: 10px;
-padding-top:15px;
+border-radius:50px;
+padding-top:15px;*/
+ height:150px;
 
 }
 
@@ -41,4 +47,11 @@ padding-top:15px;
 }
 #luckyNumberSection  p{
      font-size: 18px;
+     display: block;
+     height: 25px;
+}
+
+.display {
+height:200px !important;
+    transition:height .51s ease-in-out;
 }
