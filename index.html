@@ -5,59 +5,59 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta charset="utf-8">
 <title>fortune cookie - app</title>
-
-
-
 <link href="css/style.css" rel="stylesheet" />
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
-
 </head>
 
+
 <body>
-<div id="wrapper">
-<div class="container">
-<div class="row">
-<div class="col-xs-5">
-<img src="http://via.placeholder.com/300x300" alt="placeholder img" id="cookieImg">
-</div>
-<div class="col-xs-7">
-    <h1>Whats does your fortune cookie say?</h1>
-<div id="infoInputSection" class="display">
 
-    <p>
-    Frist we need to know a few thing about you!
-    </p>
-    <form id="form" onsubmit="return false;">
-    <input id="nameInput" type="text" placeholder="Name" required>
-    <input id="ageInput" type="text" placeholder="Age" maxlength="2" required>
-    <input id="submitbtn" type="submit" onclick="othername();" />
-    </form>
-</div>
+    <div id="wrapper">
+        <div class="container">
+            <div class="col-xs-12 col-sm-5">
+                <img src="img/fortune-cookie.jpg" alt="placeholder img" id="cookieImg">
+            </div>
 
-<div id="yourFortuneSection">
-    <h2>Your Fortune</h2>
-    <p id='yourFortune'></p>
-</div>
+            <div class="col-xs-12 col-sm-7">
+                <h1>Whats does your fortune cookie say?</h1>
+                <hr id="breakLine"/>
+                <div id="infoInputSection" class="display">
+                    <p> First, we need to know a few thing about you!
+                    </p>
 
+                    <form id="form" onsubmit="return false;">
+                        <div class="col-xs-12">
+                            <input id="nameInput" type="text" placeholder="First Name" required>
+                            <input id="ageInput" type="text" placeholder="Age" maxlength="2" required>
+                        </div>
+                        <div class="col-xs-12">
+                            <input id="submitbtn" type="submit" value="Read Your Fortune"onclick="runFortuneCookie();" />
+                        </div>
+                    </form>
+                </div>
 
+                <div id="yourFortuneSection">
+                    <!--<h2>Your Fortune</h2>-->
+                    <p id='yourFortune'></p>
+                </div>
 
+                <hr id="breakLine"/>
 
+                <div id="luckyNumberSection">
+                    <h2>Lucky Numbers</h2>
+                    <p class="col-xs-3" id="luckyNumber1">0</p>
+                    <p class="col-xs-3" id="luckyNumber2">0</p>
+                    <p class="col-xs-3" id="luckyNumber3">0</p>
+                    <p class="col-xs-3" id="luckyNumber4">0</p>
+                    <!--<button id='newNumbers'>Get New Numbers</button>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <a id="reset">reset</a>
+    </div>
 
-<hr />
-<div id="luckyNumberSection">
-    <h2>Lucky Numbers</h2>
-    <p class="col-xs-3" id="luckyNumber1">0</p>
-    <p class="col-xs-3" id="luckyNumber2">0</p>
-    <p class="col-xs-3" id="luckyNumber3">0</p>
-    <p class="col-xs-3" id="luckyNumber4">0</p>
-    <!--<button id='newNumbers'>Get New Numbers</button>-->
-</div>
-
-
-</div>
-</div>
-</div>
 <script src="js/script.js"></script>
 </body>
 </html>
