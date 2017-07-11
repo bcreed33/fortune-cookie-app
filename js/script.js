@@ -1,7 +1,7 @@
 
 var name, age;
 
-//The different possible responses for the people under 18
+//The different possible responses for the fortune, depending the age input
 var teenFortunes = [
 'a secret admirer will soon send you a sign of affection.',
 'you find beauty in ordinary things, do not lose this ability.',
@@ -30,7 +30,7 @@ var  seniorFortunes = [
  'the secret of getting ahead is getting started.'
 ];
 
-var randomResponsesSelector= Math.floor(Math.random()*4);
+
 
 
 
@@ -49,7 +49,6 @@ function showHideSection() {
 
 
 //generate a set of lucky numbers////////////////////////////////////////////
-
 //var luckyNumberArray= [0,0,0,0];
 //luckyNumberArray[0] = Math.floor(Math.random()*100);
 //luckyNumberArray[1] = Math.floor(Math.random()*100);
@@ -64,13 +63,11 @@ function showHideSection() {
 function newLuckyNumbers(){
     for (var i = 1; i < 5; i++) {
       var loopNumber = [i] ;
-      //console.log(loopNumber);
-      //setTimeout(function(){ luckyNumber(loopNumber); } , 1000);
       luckyNumber(loopNumber);
       function luckyNumber(numb) {
           document.querySelector('#luckyNumber' + numb).innerHTML=Math.floor(Math.random()*98+1);
-       }
-    };
+      };
+     };
 };
 
 
@@ -78,10 +75,13 @@ function newLuckyNumbers(){
 
 function runFortuneCookie() {
 
-  name = document.getElementById("nameInput").value;
-  age = document.getElementById("ageInput").value;
+    var randomResponsesSelector= Math.floor(Math.random()*4);
 
+    //Getting the user inputs and storing them in variables
+    name = document.getElementById("nameInput").value;
+    age = document.getElementById("ageInput").value;
 
+        //if the name or the age field is null dont run anything
        if(name == "" || age == ""){
         //alert("Enter a Valid Roll Number");
       return false;  }
@@ -91,20 +91,20 @@ function runFortuneCookie() {
         //console.log('your under 18');
       }else if(age >= 18 && age <=29){
         document.querySelector('#yourFortune').innerHTML= name + ', ' + youngAdultsFortunes[randomResponsesSelector] ;
-        console.log('your in the prime of your life');
+        //console.log('your in the prime of your life');
       }else if (age >= 30 && age <= 55){
         document.querySelector('#yourFortune').innerHTML= name + ', ' + adultsFortunes[randomResponsesSelector] ;
-        console.log('your a season vet at life');
+        //console.log('your a season vet at life');
       }else {
           document.querySelector('#yourFortune').innerHTML=name + ', ' + seniorFortunes[randomResponsesSelector] ;
-          console.log('its time to retire!');
+          //console.log('its time to retire!');
       };
-
+      //run the functions
       replaceImg();
       showHideSection();
       newLuckyNumbers();
-
-document.getElementById('reset').style.display='block';
+     //show the reset button
+     document.getElementById('reset').style.display='block';
 };
 
 
@@ -121,6 +121,8 @@ function resteLuckyNumbers(){
     };
 };
 
+
+//reseting the app
 document.querySelector('#reset').addEventListener('click', function(){
     //run the function to reset the lucky numbers
     resteLuckyNumbers();
